@@ -1,71 +1,100 @@
-# Shadcn Admin Dashboard
+# Bug/Task Tracker
 
-Admin Dashboard UI built with Shadcn and React Router v7. Built with responsiveness and accessibility in mind.
+A web application built with Next.js/React.js for tracking bugs and tasks, equipped with user authentication, task creation, and time tracking functionalities.
 
-![alt text](public/images/shadcn-admin.png)
+## Table of Contents
+- [Bug/Task Tracker](#bugtask-tracker)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Technology Stack](#technology-stack)
+  - [Project Structure](#project-structure)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Demo](#demo)
 
-I've been creating dashboard UIs at work and for my personal projects. I always wanted to make a reusable collection of dashboard UI for future projects; and here it is now. While I've created a few custom components, some of the code is directly adapted from ShadcnUI examples.
+---
 
-> This is not a starter project (template) though. I'll probably make one in the future.
+## Overview
+This project is a bug and task tracker interface designed to demonstrate frontend development skills with a focus on UI/UX design and Next.js/React.js. The application allows users to manage and track tasks/bugs effectively.
 
 ## Features
+- **User Authentication**: Mock authentication for login, redirecting to the dashboard on success.
+- **Dashboard**: Displays a list of tasks with a trend line of concurrent tasks worked on each day.
+- **Task/Bug Creation**: Users can create, edit, and delete tasks/bugs with various fields like title, description, priority, status, assignee, etc.
+- **Task/Bug Management**: Filter and sort tasks based on priority, status, etc.
+- **Time Tracker**: Log time spent on each task and display the total time.
+- **Responsive UI**: A clean, user-friendly interface optimized for desktop and mobile devices.
 
-- Light/dark mode
-- Responsive
-- Accessible
-- With built-in Sidebar component
-- Global Search Command
-- 10+ pages
-- Extra custom components
+##Example Login
+- admin@example.com
+- password = password
 
-## Tech Stack
 
-**UI:** [ShadcnUI](https://ui.shadcn.com) (TailwindCSS + RadixUI)
+## Technology Stack
+- **Frontend**: Next.js/React.js
+- **Styling**: CSS / CSS-in-JS (e.g., styled-components)
+- **State Management**: Optional library (e.g., Redux or Zustand)
 
-**Build Tool:** [Vite](https://vitejs.dev/)
+## Project Structure
+The project structure is organized as follows:
 
-**Routing:** [React Router v7](https://reactrouter.com/en/main) (Framework)
-
-**Form Validation:** [Conform](https://conform.guide/)
-
-**Type Checking:** [TypeScript](https://www.typescriptlang.org/)
-
-**Linting/Formatting:** [Biome](https://biomejs.dev/) & [Prettier](https://prettier.io/)
-
-**Icons:** [Tabler Icons](https://tabler.io/icons)
-
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/coji/shadcn-admin-react-router.git
+```
+bug-tracker/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── ActivityChart.tsx
+│   │   ├── LoginForm.tsx
+│   │   ├── Modal.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── NotificationCenter.tsx
+│   │   ├── NotificationPanel.tsx
+│   │   ├── ProjectForm.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── TicketForm.tsx
+│   │   ├── TimeTracker.tsx
+│   │   ├── UserForm.tsx
+│   │   ├── UserProfile.tsx
+│   │   ├── UserSettings.tsx
+│   ├── pages/
+│   │   ├── Dashboard.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Tickets.tsx
+│   │   ├── Users.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── style.css
+├── index.html
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-Go to the project directory
+## Getting Started
 
-```bash
-  cd shadcn-admin-react-router
-```
+### Prerequisites
+- Node.js and npm installed
 
-Install dependencies
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/bug-tracker.git
+   cd bug-tracker
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the application:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-  pnpm install
-```
+4. Access the app in your browser at `http://localhost:5173`.
 
-Start the server
+## Demo
+- [Live Demo Link](https://bugtracker-rho.vercel.app/login) 
+- [Video Showcase](#) 
 
-```bash
-  pnpm run dev
-```
-
-## Author
-
-Crafted with 🤍 by [@coji](https://github.com/coji)
-
-This project is a fork of [shadcn-admin](https://github.com/satnaing/shadcn-admin) by [@satnaing](https://github.com/satnaing). Thanks for the great original work!
-
-## License
-
-Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
