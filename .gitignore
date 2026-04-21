@@ -22,9 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-.react-router/
-build/
-.vercel
-references
-.playwright-mcp
